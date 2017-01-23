@@ -20,7 +20,6 @@ public class LoginActivity extends AppCompatActivity {
         ButtonValider = (Button) findViewById(R.id.buttonValider);
         ButtonValider.setOnClickListener(this);
 
-
     }
 
     @Override
@@ -31,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onClick(View v){
         Downloader d = new Downloader();
-        d.setListDownload(this);
+        d.setListeners(this);
         d.execute();
     }
 }

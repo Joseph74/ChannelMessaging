@@ -20,14 +20,20 @@ import javax.net.ssl.HttpsURLConnection;
 /**
  * Created by cocherej on 20/01/2017.
  */
-public class Downloader extends AsyncTask <Void, Void, String> {
+public class Downloader extends AsyncTask <Void, Void, String> implements onDownloadCompleteListener {
 
     private ArrayList<onDownloadCompleteListener> Listeners = new ArrayList<>();
+    LoginActivity login;
 
     protected String doInBackground(Void...params){
+
+        login = new LoginActivity();
+
         HashMap<String, String> postparams = new HashMap<>();
         postparams.put = ("username", "cocherej");
-        postparams.put = ("password", );
+        postparams.put = ("password", "cocherejpassword");
+        String response = performPostCall("http://www.raphaelbischof.fr/messaging/?function=connect", postparams);
+        return response;
     }
 
     protected void onPostExecute(String s){
@@ -88,7 +94,11 @@ public class Downloader extends AsyncTask <Void, Void, String> {
         return result.toString();
     }
 
-    public void setListDownload(OnDownloadCompleteListener listDownload) {
-        this.listDownload.add(listDownload);
+    public void setListeners(onDownloadCompleteListener Listeners) {
+        this.Listeners.add(Listeners);
+    }
+
+    public void onDownloadCompleted(String content) {
+
     }
 }

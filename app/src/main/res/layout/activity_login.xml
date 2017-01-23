@@ -43,7 +43,9 @@
         android:textStyle="normal"
         android:layout_below="@+id/txtId"
         android:layout_alignLeft="@+id/txtId"
-        android:layout_alignStart="@+id/txtId" />
+        android:layout_alignStart="@+id/txtId"
+        android:layout_alignRight="@+id/txtId"
+        android:layout_alignEnd="@+id/txtId" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -52,5 +54,12 @@
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/buttonValider"
         android:layout_alignStart="@+id/buttonValider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"></RelativeLayout>
 
 </RelativeLayout>
