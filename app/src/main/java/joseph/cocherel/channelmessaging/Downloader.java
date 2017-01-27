@@ -22,18 +22,26 @@ import javax.net.ssl.HttpsURLConnection;
  */
 public class Downloader extends AsyncTask <Void, Void, String> implements onDownloadCompleteListener {
 
+    public static final String PREFS_NAME = "properties";
+
     private ArrayList<onDownloadCompleteListener> Listeners = new ArrayList<>();
     LoginActivity login;
+    ChannelActivity channel;
 
     protected String doInBackground(Void...params){
 
         login = new LoginActivity();
 
-        HashMap<String, String> postparams = new HashMap<>();
-        postparams.put = ("username", "cocherej");
-        postparams.put = ("password", "cocherejpassword");
-        String response = performPostCall("http://www.raphaelbischof.fr/messaging/?function=connect", postparams);
-        return response;
+        if(this.login != null) {
+            HashMap<String, String> postparams = new HashMap<>();
+            postparams.put ("username", "cocherej");
+            postparams.put ("password", "cocherejpassword");
+            String response = performPostCall("http://www.raphaelbischof.fr/messaging/?function=connect", postparams);
+            return response;
+        }
+        else if (this.channel != null){
+
+        }
     }
 
     protected void onPostExecute(String s){
