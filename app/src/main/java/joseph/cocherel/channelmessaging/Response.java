@@ -1,8 +1,5 @@
 package joseph.cocherel.channelmessaging;
 
-/**
- * Created by cocherej on  23/01/2017.
- */
 public class Response {
     private String response;
     private String code;
@@ -38,4 +35,3 @@ public class Response {
         this.accesstoken = accesstoken;
     }
 }
-
