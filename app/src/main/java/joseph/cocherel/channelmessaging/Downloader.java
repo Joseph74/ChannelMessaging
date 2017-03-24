@@ -121,7 +121,6 @@ public class Downloader extends AsyncTask<Void, Void, String> implements OnDownl
             postparams.put("password", login.getPassword());
             response = performPostCall("http://www.raphaelbischof.fr/messaging/?function=connect", postparams);
         }
-        //faire méthode générique
         else{
             response = performPostCall(url, this.postparams);
         }

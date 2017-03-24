@@ -22,7 +22,6 @@ public class ChannelMessage extends AppCompatActivity implements OnDownloadCompl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message);
-        //ChannelList = (ListView) findViewById(R.id.lvChannels);
         title = (TextView) findViewById(R.id.txtTitleChannel);
         messages = (ListView) findViewById(R.id.listViewMessages);SharedPreferences settings = getSharedPreferences(Downloader.PREFS_NAME, 0);
         String accesstoken = settings.getString("accesstoken", "");

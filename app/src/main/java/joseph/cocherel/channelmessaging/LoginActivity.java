@@ -54,7 +54,7 @@ public class LoginActivity extends AppCompatActivity implements OnDownloadComple
         Gson gson = new Gson();
         Response response = gson.fromJson(content, Response.class);
         if(response == null){
-            Toast toast = Toast.makeText(getApplicationContext(), "erreur de connexion", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(getApplicationContext(), "Erreur", Toast.LENGTH_LONG);
             toast.show();
         }
         else{
@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity implements OnDownloadComple
                 Intent myIntent = new Intent(getApplicationContext(), ChannelActivity.class);
                 startActivity(myIntent);
             } catch (Exception e) {
-                Toast toast = Toast.makeText(getApplicationContext(), "erreur dans le lancement de l'application", Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(getApplicationContext(), "Erreur", Toast.LENGTH_LONG);
                 toast.show();
             }
         }else{
@@ -81,7 +81,7 @@ public class LoginActivity extends AppCompatActivity implements OnDownloadComple
             EditText txtFieldPassword = (EditText) findViewById(R.id.etPassword);
             txtFieldPassword.setText("");
 
-            Toast toast = Toast.makeText(getApplicationContext(), "Vous ne passerer pas !!!!!!!!!!!!! (informations incorrects)", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(getApplicationContext(), "Informations incorrectes", Toast.LENGTH_LONG);
             toast.show();
         }
 

@@ -16,7 +16,6 @@ import java.util.List;
 public class ArrayAdaptaterMessage extends ArrayAdapter<Message> {
     private final Context context;
     private List<Message> listmessage;
-    //private final Channel[] values;
 
     public ArrayAdaptaterMessage(Context context, List<Message> listMessage) {
         super(context, R.layout.activity_message, listMessage);

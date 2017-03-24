@@ -12,7 +12,6 @@ import java.util.List;
 public class ArrayAdapterChannel extends ArrayAdapter<Channel> {
     private final Context context;
     private List<Channel> listChannel;
-    //private final Channel[] values;
 
     public ArrayAdapterChannel(Context context, List<Channel> listChannel) {
         super(context, R.layout.activity_channel, listChannel);
